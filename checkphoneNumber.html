@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <input id ="input" type = "text">
+    <input id ="input2" type = "text">
+    <button onclick="isNumberChecked();">Check</button>
+    <output id ="output">ket qua kiem tra:</output>
+</head>
+<body>
+<script>
+    function isNumberChecked() {
+        str = document.getElementById("input").value;
+        str2 = document.getElementById("input2").value;
+        regexp1 = /^[0-9]{2}$/;
+        document.getElementById("output").innerHTML=regexp1.test(str);
+        regexp2 = /^[0-9]{10}$/;
+        document.getElementById("output").innerHTML = regexp2.test(str2);
+    }
+</script>
+</body>
+</html>
